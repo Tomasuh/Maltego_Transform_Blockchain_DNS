@@ -1,4 +1,4 @@
-# Maltego Transform Blockchain name system
+# Maltego Transform - Expore the (Emer|Name)coin name system
 
 This Maltego transform is used to explore the domain and 
 IP connections stored in the (domain-)name systems for Namecoin and Emercoin.
