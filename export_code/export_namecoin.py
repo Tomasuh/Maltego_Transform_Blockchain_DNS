@@ -5,6 +5,8 @@ import ipaddress
 import socket
 import dns.resolver
 from multiprocessing import Pool
+from db_helper import DB_Helper
+import time
 
 from settings import n_url, n_rpc_user, n_rpc_password
 
@@ -65,20 +67,27 @@ class Export_Namecoin:
 
     def download_nvs(self, start="", rate=1):
         payload = json.dumps({"method": "name_scan", "params": [start, rate]})
-        response = requests.request("POST", self.url, data=payload, headers=self.headers, auth=(self.rpc_user, self.rpc_password))
-        return json.loads(response.text)
+        
+        response = 'Work queue depth exceeded'
+        while "Work queue depth exceeded" in response:
+            response = requests.request("POST", self.url, data=payload, headers=self.headers, auth=(self.rpc_user, self.rpc_password)).text
+            time.sleep(1)
+        
+        return json.loads(response)
 
     # Current IP is voluntarily, if included, it will be dropped from the returned list
     def download_name_history(self, name, current_ip=None):
         payload = json.dumps({"method": "name_history", "params": [name]})
-        response = requests.request("POST", self.url, data=payload, headers=self.headers, auth=(self.rpc_user, self.rpc_password))
-        try:
-            res = json.loads(response.text)
-        except:
-            #print("Failed to view history for {}".format(name))
-            return []
+        response = 'Work queue depth exceeded'
+        while "Work queue depth exceeded" in response:
+            response = requests.request("POST", self.url, data=payload, headers=self.headers, auth=(self.rpc_user, self.rpc_password)).text
+            time.sleep(1)
+
+        res = json.loads(response)
+
         if not res["result"]:
-            #print("Failed to view history for {}".format(name))
+            print(response)
+            print("Failed to view history for {}".format(name))
             return []
         ips = []
 
@@ -97,7 +106,7 @@ class Export_Namecoin:
                 for ip in self.get_ips(v_parsed["ip"]):
                     ips.append(ip)
 
-        if current_ip:
+        if current_ip in ips:
             ips.remove(current_ip)
 
         return ips
@@ -145,7 +154,7 @@ class Export_Namecoin:
         if not name.endswith(".bit"):
             name = name + ".bit"
 
-        if current_ip and current_ip!='':
+        if current_ip and current_ip in historical_ips:
             historical_ips.remove(current_ip)
 
         end_dict = {"name": name, "current_ip": current_ip, "historical_ips": historical_ips}
