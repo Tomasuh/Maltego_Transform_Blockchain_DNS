@@ -18,8 +18,7 @@ Change working directory to `export_code` and execute `export_main.py`.
 ## Maltego transform installation
 Two transforms needs to installed, one for IP lookup and one for DNS.
 
-The maltego project filename is in the root folder of the project, named `maltego_project.py` 
-and the class for IP transform is named `Blockchain_DNS_Transform_IP` and for Domain transform `Blockchain_DNS_Transform_Domain`.
+The maltego project filename is `maltego_project.py` and located in the root folder of the project. The class for IP transform is named `Blockchain_DNS_Transform_IP` and for Domain transform `Blockchain_DNS_Transform_Domain`.
 
 With that, the installation part of [this Maltego documentation](https://docs.maltego.com/support/solutions/articles/15000017605-writing-local-transforms-in-python) should be enough to get through the installation.
 
