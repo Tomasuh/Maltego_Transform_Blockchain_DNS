@@ -26,3 +26,8 @@ With that, the installation part of [this Maltego documentation](https://docs.ma
 ## Dependencies
 
 The dependencies in requirements.txt only need to be installed if a regenaration of the database will be done.
+
+# Limitations
+
+This project is more of a POC than an error-free product.
+It should however be enough to aid investigations of threat-actors utilizing the name system of Emercoin and Namecoin.
