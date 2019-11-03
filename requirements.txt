@@ -1,0 +1,4 @@
+maltego-trx
+requests
+ipaddress
+dnspython
