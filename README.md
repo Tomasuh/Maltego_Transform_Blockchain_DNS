@@ -1,7 +1,7 @@
 # Maltego Explorer of the (Emer|Name)coin name system
 
 This Maltego transform is used to explore the domain and 
-IP connections of the name systems for Namecoin and Emercoin.
+IP relations of the domain systems for Namecoin and Emercoin.
 The queried SQL database includes both current and past relations, as the blockchain allows the viewing of historical values.
 
 Example graph where the starting node was `pationare.bit`:
