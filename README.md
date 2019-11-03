@@ -15,7 +15,7 @@ Example graph where the starting node was `pationare.bit`:
 Make sure that `settings.py` has correct credentials for your Namecoin and Emercoin client and that you have enabled JSON RPC on them.
 Change working directory to `export_code` and execute `export_main.py`.
 
-## Notes Maltego transform installation
+## Maltego transform installation
 Two transforms needs to installed, one for IP lookup and one for DNS.
 
 The maltego project filename is in the root folder of the project, named `maltego_project.py` 
