@@ -4,7 +4,7 @@ This Maltego transform is used to explore the domain and
 IP connections stored in the (domain-)name systems for Namecoin and Emercoin.
 The queried relation-database includes both current and past relations, as the blockchain allows the viewing of historical values.
 
-Example graph where the starting node was `pationare.bit`, from it one can find additional domains which has resolved towards the same IP addresses and also find IP addresses possibly related to starting node:
+Example graph where the starting node was `pationare.bit`:
 
 ![](images/example_exploration.png)
 
