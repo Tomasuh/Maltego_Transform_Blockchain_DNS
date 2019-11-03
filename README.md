@@ -16,7 +16,7 @@ Make sure that `settings.py` has correct credentials for your Namecoin and Emerc
 Change working directory to `export_code` and execute `export_main.py`.
 
 ## Maltego transform installation
-Two transforms needs to installed, one for IP lookup and one for DNS.
+Two transforms needs to installed, one for IP lookup and one for Domain lookup.
 
 The maltego project filename is `maltego_project.py` and located in the root folder of the project. The class for IP transform is named `Blockchain_DNS_Transform_IP` and for Domain transform `Blockchain_DNS_Transform_Domain`.
 
