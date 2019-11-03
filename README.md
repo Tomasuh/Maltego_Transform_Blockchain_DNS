@@ -10,7 +10,7 @@ Example graph where the starting node was `pationare.bit`:
 
 # Setup
 
-## Regenaration of Namecoin and Emercoin name system data
+## New export of Namecoin and Emercoin name system database
 
 Make sure that `settings.py` has correct credentials for your Namecoin and Emercoin client and that you have enabled JSON RPC on them.
 Change working directory to `export_code` and execute `export_main.py`.
@@ -25,4 +25,4 @@ With that, the installation part of [this Maltego documentation](https://docs.ma
 
 ## Dependencies
 
-The dependencies in requirements.txt does only need to be installed if a regenaration of the database will be done.
+The dependencies in requirements.txt only need to be installed if a regenaration of the database will be done.
