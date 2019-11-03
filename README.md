@@ -26,6 +26,13 @@ With that, the installation part of [this Maltego documentation](https://docs.ma
 
 The dependencies in requirements.txt only need to be installed if a regenaration of the database will be done.
 
+# Related research
+
+The following paper and presentation by Kevin Perlow is a great intro into this research field:
+
+* [Beating the Blockchain - Mapping Out Decentralized Namecoin and Emercoin Infrastructure](https://i.blackhat.com/us-18/Wed-August-8/us-18-Perlow-Beating-the-Blockchain-by-Mapping-Out_Decentralized_Namecoin-and-Emercoin-Infrastructure-wp.pdf)
+* [https://www.youtube.com/watch?v=1iwsouV8ouQ](https://www.youtube.com/watch?v=1iwsouV8ouQ)
+
 # Limitations
 
 This project is more of a POC than an error-free product.
