@@ -29,4 +29,4 @@ The dependencies in requirements.txt only need to be installed if a regenaration
 # Limitations
 
 This project is more of a POC than an error-free product.
-It should however be enough to aid investigations of threat-actors utilizing the name system of Emercoin and Namecoin.
+It should however be possible to use it in order to aid investigations of threat-actors utilizing the name system of Emercoin and Namecoin.
